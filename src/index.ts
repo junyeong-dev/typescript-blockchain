@@ -24,6 +24,10 @@ const genesisBlock: Block = new Block(0, "56918234", "", "block", 12345);
 
 let blockChain: Block[] = [genesisBlock];
 
-console.log(blockChain);
+const getBlockChain = () : Block[] => blockChain;
+
+const getLatestBlock = () : Block => blockChain[blockChain.length - 1];
+
+const getNewTimeStamp = () : number => Math.round(new Date().getTime() / 1000);
 
 export {};
