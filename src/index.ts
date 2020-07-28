@@ -62,4 +62,10 @@ const isBlockValid = (candidateBlock: Block, previousBlock: Block) : boolean => 
     }
 }
 
+const addBlock = (candidateBlock: Block) : void => {
+    if(isBlockValid(candidateBlock, getLatestBlock())){
+        blockChain.push(candidateBlock);
+    }
+}
+
 export {};
